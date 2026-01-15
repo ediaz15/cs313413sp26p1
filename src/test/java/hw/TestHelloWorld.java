@@ -33,7 +33,7 @@ public class TestHelloWorld {
   }
 
   @Test
-  public void getYear() { // this test is OK, fix HelloWorld.java to make it pass!
+  public void getYear() { // this test is OK, fix HelloWorld.java to make it pass! --- done!
     assertNotNull(fixture);
     assertEquals(2026, fixture.getYear());
   }
@@ -41,12 +41,12 @@ public class TestHelloWorld {
   @Test
   public void getMessageInList() { // this test is broken - fix it!
     var list = Arrays.asList(fixture);
-    assertEquals("hello world", list.get(1).getMessage());
+    assertEquals("hello world", list.get(0).getMessage()); //list.get() updated to fetch the string from getMessage()
   }
 
   @Test
   public void getYearInList() { // this test is broken - fix it!
     var list = Arrays.asList(fixture);
-    assertEquals(2026, list.get(1).getYear());
+    assertEquals(2026, list.get(0).getYear());
   }
 }
